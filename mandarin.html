@@ -1,0 +1,302 @@
+<body>
+    <style>
+
+        header {
+          background-color: #e9d2e3;
+          padding: 15px 0;
+          text-align: center;
+          box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+          position: sticky;
+          top: 0;
+          z-index: 999;
+        }
+      
+        header a {
+          color: #5c636f;
+          text-decoration: none;
+          font-family: 'Poppins', sans-serif;
+          margin: 0 15px;
+          font-size: 15px;
+          transition: color 0.s ease;
+          font-weight: 400;
+        }
+      
+        header a:hover {
+          color: hsl(224, 32%, 88%);
+        }
+      
+        h1 {
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+          text-align: center;
+          margin-top: 30px;
+          font-size: 36px;
+          color: #3e404b;
+          text-decoration: capitalize;
+          transition: 2s linear;
+        }
+    *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+     background-color: #ffedf9;
+  display: flex;
+  flex-direction: column;
+}
+h1 {
+  font-family: 'montserrat', serif;
+  font-size: 1.8rem;
+  margin: 10px 0;
+  font-weight: 700;
+}
+
+h2 {
+  font-family: 'Playfair display', serif;
+  font-size: 1.5rem;
+  margin: 10px 0;
+  color: #5c636f;
+}
+
+img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  margin-top: 10px;
+}
+
+p {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #555;
+  font-family: 'Playfair Display', serif;
+  padding: 0 15px;
+  text-align: center;
+ }
+ .subject-container {
+  background-color: white;
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 30px;
+  width: 70%;
+  max-width: 850px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  text-align: center;
+}
+.sticky-note {
+  background-color: #fff8b8; /* soft pastel yellow */
+  width: 300px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 4px 6px 12px rgba(0,0,0,0.1);
+  position: relative;
+  transform: rotate(-2deg);
+  margin: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.sticky-note h3 {
+  margin-top: 0;
+  font-size: 1.3rem;
+  color: #5c5c5c;
+}
+
+.sticky-note p {
+  font-size: 1rem;
+  color: #333;
+}
+
+.clip-icon {
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  width: 40px;
+}
+.note-pic-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin: 40px auto;
+  max-width: 1100px;
+}
+
+.sticky-group {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.note-image img {
+  width: 400px;
+  max-height: 550px;
+  border-radius: 15px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+  transform: rotate(1deg);
+}
+.washi-tape {
+  width: 60px;
+  height: 20px;
+  background: repeating-linear-gradient(
+    45deg,
+    #fbc2eb,
+    #fbc2eb 5px,
+    #a6c1ee 5px,
+    #a6c1ee 10px
+  );
+  position: absolute;
+  top: -12px;
+  left: 30px;
+  transform: rotate(-6deg);
+  border-radius: 4px;
+  opacity: 0.8;
+}
+.doodle-star {
+  position: absolute;
+  bottom: -15px;
+  right: -10px;
+  width: 50px;
+}
+.doodle-star img {
+  width: 100%;
+}
+.quiz-container {
+  background-color: #fcefee;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+  margin: 40px auto;
+  width: 80%;
+  max-width: 500px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.quiz-container h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #e27396;
+}
+
+.options button {
+  display: block;
+  margin: 10px auto;
+  background-color: #fddde6;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.options button:hover {
+  background-color: #fcbad3;
+}
+
+#surprise-message {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  color: #8c5e58;
+  font-weight: bold;
+  animation: pop 0.4s ease;
+}
+
+#surprise-message img {
+  width: 60px;
+  margin-bottom: 10px;
+}
+
+.hidden {
+  display: none;
+}
+.note-image img {
+  animation: floatUpDown 3s ease-in-out infinite;
+}
+
+@keyframes floatUpDown {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+.sticky-note:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+header {
+  background: linear-gradient(to right, #e9d2e3, #fcefee);
+  border-bottom: 3px solid #f5a5c0;
+}
+
+
+      </style>
+        </head>
+        <body>
+       <header>
+      <a href="index.html">Home</a>
+      <a href="agama.html">Agama</a>
+ <a href="bahasaindonesia.html">Bahasa Indonesia</a>
+ <a href="pkn.html">Pkn</a>
+ <a href="ips.html">IPS</a>
+ <a href="english.html">English</a>
+ <a href="mandarin.html">Mandarin</a>
+</header>
+<div class="note-pic-wrapper">
+  <div class="sticky-group">
+    <div class="sticky-note">
+      <div class="washi-tape"></div>
+      <h3>Pengalaman Live-In Dengan Orang Tua Asuh</h3>
+      <p>Jadi, ini adalah AP Mandarin yaitu untuk menjelaskan pengalaman saat melakukan kegiatan Live-in. Selain itu, kami juga mewawancarai orang tua asuh untuk menjawab pertanyaan-pertanyaan yang seharusnya di poster ini!</p>
+    </div>
+
+    <div class="sticky-note">
+      <div class="doodle-star">
+        <img src="pngtree-star-doodles-png-image_14080843.avif" alt="star doodle" />
+      </div>
+      
+      <img src="Pin-PNG-File.png" alt="clip" class="clip-icon">
+      <p>Sekedar informasi, 家 (jia) adalah rumah! Selain itu, ada lagi 的 = kepemilikan barang atau suatu benda. Jadi, jika ingin mengatakan rumah Bu Ana, seperti yang ada di dalam poster, kamu dapat bilang seperti ini: Bu Ana的家.</p>
+    </div>
+  </div>
+
+<div class="note-image">
+  <img src="Screenshot 2025-04-18 173201.png" alt="Decorative image">
+</div>
+</div>
+
+  <div class="quiz-container">
+    <h3>💡 Quiz Time!</h3>
+    <p>Apa arti dari “Bu Ana的家”?</p>
+    <div class="options">
+      <button onclick="checkAnswer(this)">Rumah Bu Ana</button>
+      <button onclick="checkAnswer(this)">Anak Bu Ana</button>
+      <button onclick="checkAnswer(this)">Keluarga Bu Ana</button>
+    </div>
+    <div id="surprise-message" class="hidden">
+      <img src="confetti_PNG87081.png" alt="star" />
+      <p>Yay! Kamu benar ✨ Rumah Bu Ana artinya Bu Ana的家!</p>
+    </div>
+  </div>
+  
+  </div>
+</div>
+<script>
+  function checkAnswer(button) {
+    const correctAnswer = "Rumah Bu Ana";
+    if (button.innerText === correctAnswer) {
+      document.getElementById('surprise-message').classList.remove('hidden');
+    } else {
+      alert("Ups! Ayo coba lagi!");
+    }
+  }
+</script>
+
+</body>

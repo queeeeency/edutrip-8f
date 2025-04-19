@@ -1,0 +1,299 @@
+<body>  <style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(255, 254, 234);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 100px;
+  }
+
+  header {
+    background-color: rgba(214, 234, 229, 0.8);
+    padding: 15px 0;
+    text-align: center;
+    z-index: 999;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+  border-bottom: 3px solid #dad48d;
+}
+
+
+  header a {
+    color: #5c636f;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    margin: 0 15px;
+    font-size: 15px;
+    transition: color 0.3s ease;
+    font-weight: 400;
+  }
+
+  .main-layout {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+    max-width: 1300px;
+    width: 100%;
+  }
+
+  .left-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    width: 50%;
+  }
+
+  .left-images {
+    display: flex;
+    gap: 20px;
+  }
+
+  .stacked-images {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .stacked-images img,
+  .big-image img {
+    width: 288px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+
+  .big-image img {
+    height: 420px;
+  }
+
+  .extras-row {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+  }
+
+  .fun-fact {
+    background-color: #fffbe6;
+    border-left: 5px solid #ffb347;
+    padding: 15px;
+    border-radius: 15px;
+    width: 300px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: 0.3s ease;
+  }
+
+  .fun-fact h3 {
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+
+  .fun-fact p {
+    display: none;
+    font-size: 14px;
+    color: #444;
+  }
+
+  .fun-fact.open p {
+    display: block;
+  }
+
+  .interactive {
+    width: 300px;
+    height: 150px;
+    background-color: #d6eae5;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: #3e404b;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+
+  .right-column {
+    width: 50%;
+    position: relative;
+  }
+
+  .scroll-box {
+  position:relative;
+  height: 600px;
+  overflow-y: auto;
+  background-color: rgba(214, 234, 229, 0.8);
+  padding: 20px 30px; /* Added extra padding for better text spacing */
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Playfair Display', serif;
+  line-height: 1.5;
+  scrollbar-width: thin;
+  scrollbar-color: #b9c9c5 transparent;
+
+  /* ✏️ Notebook lines effect */
+  background-image: repeating-linear-gradient(
+    to bottom,
+    rgba(137, 134, 134, 0.336) 0px,
+    rgba(137, 134, 134, 0.336) 1.3px,
+    transparent 1px,
+    transparent 28px
+  );
+  .scroll-box::-webkit-scrollbar-thumb{
+    background-color: #b9c9c5;
+    border-radius: 10px;
+  }
+}
+  .scroll-box p {
+    font-size: 1.1rem;
+    color: #3e404b;
+  }
+
+  .sticker-decor {
+    position: absolute;
+    top: -30px;
+    left: 85px;
+    width: 60px;
+  }
+
+  .sticker-decor2 {
+    position: absolute;
+    bottom: -30px;
+    left: 600px;
+    width: 60px;
+  }
+  .heritage-tool-container {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px; /* Adds space between the tool images and the text */
+}
+
+.heritage-tool-container img {
+  width: 80px; /* Adjust the size of the alat prasejarah images */
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+@keyframes moveLeftSmooth {
+  0% {
+    transform: translateX(100vw);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}
+@keyframes floatUpDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+.chase-stickers {
+  position: fixed;
+  bottom: 5px;
+  left: 0;
+  display: flex;
+  gap: 10px;
+  height: 100px;
+  animation: moveLeftSmooth 10s linear infinite;
+  z-index: 1000;
+}
+
+
+.chase-stickers img {
+  height: 100px;
+  animation: floatUpDown 1s ease-in-out infinite;
+}
+
+</style>
+
+<header>
+  <a href="index.html">Home</a>
+  <a href="agama.html">Agama</a>
+  <a href="bahasaindonesia.html">Bahasa Indonesia</a>
+  <a href="pkn.html">Pkn</a>
+  <a href="ips.html">IPS</a>
+  <a href="english.html">English</a>
+  <a href="mandarin.html">Mandarin</a>
+</header>
+
+<div class="main-layout">
+  <div class="left-column">
+    <div class="left-images">
+      <div class="stacked-images" style="position: relative;">
+
+        <img src="WhatsApp Image 2025-04-18 at 12.16.24_ddb0f68d.jpg" alt="Image 1">
+        <img src="WhatsApp Image 2025-04-18 at 12.16.25_5daa48ec.jpg" alt="Image 2">
+      </div>
+      <div class="big-image">
+        <img src="WhatsApp Image 2025-04-18 at 12.16.25_af8dbdaa.jpg" alt="Big Image">
+      </div>
+      <div class="chase-stickers">
+        <img src="Screenshot_2025-04-18_144827-removebg-preview (1).png" class="runner" />
+        <img src= "WhatsApp_Image_2025-04-18_at_14.51.32_06ef1c56-removebg-preview.png" class="elephant" />
+      </div>      
+    </div>
+    <div class="extras-row">
+      <div class="interactive">Try Me!</div>
+      <div class="fun-fact" onclick="this.classList.toggle('open')">
+        <h3>Fun Fact 🧐</h3>
+        <p>Manusia purba diketahui sudah berevolusi sejak 2 juta tahun yang lalu loh! Selain itu, homo sapiens adalah manusia purba yang paling dominan dalam hal kecerdasan dan kekuatan fisik, yang membuat mereka dapat berevolusi dengan baik hingga menjadi manusia modern! 🔨</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="right-column">
+    <img src= "1faa8.png" class="sticker-decor">
+    <img src="fire-png.webp" class="sticker-decor2">
+</div>
+    <div class="scroll-box">
+      <p style="margin-bottom: 20px; margin-top: 20px;">Manusia purba merupakan julukan bagi spesies manusia yang hidup pada masa prasejarah, jauh sebelum zaman sejarah dan catatan tertulis. Karakteristik manusia purba adalah untuk berburu dan meramu. Pada zaman dahulu, mereka berburu hewan untuk bertahan hidup menggunakan benda-benda yang mereka buat sebagai senjata. </p>
+    <p>Namun, seiring berkembangnya zaman, ada perubahan pada cara manusia bertahan hidup. Karena perubahan kapasitas volume otak yang membuat kita semakin pintar, manusia tidak lagi menggunakan cara purba itu.
+    Seiring perkembangan, manusia purba mulai mengenal pertanian dan beternak. Ini menandai transisi dari manusia nomaden menjadi manusia menetap. Mereka mulai membangun tempat tinggal, mengenal api, dan membentuk kelompok sosial. Ini adalah cikal bakal kehidupan masyarakat modern.</p>
+    </div>
+    </div>
+    <div class="interactive-tools">
+      <div class="heritage-tool-container">
+      <h3>Temukan Alat Prasejarah!</h3>
+      <button onclick="showTool('kapak')">🪓 Kapak</button>
+      <button onclick="showTool('tombak')">🗡️ Tombak</button>
+      <button onclick="showTool('batu')">🪨 Batu</button>
+      <div id="tool-description" class="tool-box"></div>
+    </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.querySelector('.interactive').addEventListener('click', function() {
+    alert("Good job! You found the interactive element 🎉");
+  });
+
+  function showTool(tool) {
+  const descriptions = {
+    kapak: "Kapak digunakan untuk memotong kayu dan berburu hewan.",
+    tombak: "Tombak membantu manusia purba dalam berburu hewan besar.",
+    batu: "Batu tajam digunakan sebagai alat pemotong atau pengikis."
+  };
+  document.getElementById("tool-description").innerText = descriptions[tool];
+}
+
+</script>
+</body>

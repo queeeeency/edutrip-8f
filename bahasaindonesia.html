@@ -1,0 +1,240 @@
+<body>
+    <style>
+
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f2f8f8;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background-color: #c3ced1;
+      padding: 15px 0;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    header a {
+      color: #5c636f;
+      text-decoration: none;
+      font-family: 'Poppins', sans-serif;
+      margin: 0 15px;
+      font-size: 15px;
+      transition: color 0.3s ease;
+      font-weight: 400;
+    }
+
+    header a:hover {
+      color: hsl(224, 32%, 88%);
+    }
+
+
+    .section {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      margin: 50px auto;
+      gap: 20px;
+      flex-wrap: wrap;
+      width: 70%;
+      max-width: 850px;
+    }
+
+    .story {
+      flex: 1 1 300px;
+      font-size: 1rem;
+      color: #5a4d4d;
+      background: #fff4ec;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 2px 4px 10px rgba(0,0,0,0.05);
+      font-family: 'Playfair Display', serif;
+    }
+
+    .postcard {
+      flex: 1 1 250px;
+      background-color: #ffffff;
+      border: 2px dashed #dbaec1;
+      border-radius: 16px;
+      padding: 15px;
+      position: relative;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+    }
+
+    .postcard img {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 10px;
+    }
+
+    .rating {
+      font-size: 1.2rem;
+      color: #ffb703;
+    }
+
+    .note {
+      font-family: 'Shadows Into Light', cursive;
+      font-size: 1rem;
+      color: #7b6e6e;
+      margin-top: 5px;
+    }
+
+    @media (max-width: 700px) {
+      .section {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+    .washi-tape {
+  width: 80px;
+  height: 30px;
+  background: repeating-linear-gradient(
+    45deg,
+    #c2e2fb,
+    #f0def8 5px,
+    #f5f9cb 5px,
+    #c6d9e7 10px
+  );
+  position: absolute;
+  top: -20px;
+  left: 150px;
+  transform: rotate(5deg);
+  border-radius: 4px;
+  opacity: 0.8;
+}
+
+.washi-tape1 {
+  width: 70px;
+  height: 30px;
+  background: repeating-linear-gradient(
+    45deg,
+    #fbc2eb,
+    #fbfac2 5px,
+    #e0cfee 5px,
+    #ccdaf1 10px
+  );
+  position: absolute;
+  top: -20px;
+  left: 10px;
+  transform: rotate(-8deg);
+  border-radius: 4px;
+  opacity: 0.8;
+}
+.postcard {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.postcard:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+.story {
+  position: relative;
+  padding-left: 30px; /* To make room for the binding */;
+  border-radius: 15px;
+  box-shadow: 2px 4px 10px rgba(0,0,0,0.05);
+  font-family: 'Playfair Display', serif;
+  background: repeating-linear-gradient(
+    to bottom, 
+    #c6c6c6 0px, 
+    #c6c6c6 1px, 
+    transparent 1px, 
+    transparent 20px
+  ),
+  #fffffc
+}
+
+.story::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 15px;
+  height: 100%;
+  background: #3c3c3c; /* The color of the notebook binding */
+  border-radius: 5px 0 0 5px;
+}
+.sticker-clip {
+  position: absolute;
+  top: 3px;
+  left: -33px;
+  width: 75px;
+  transform: rotate(45deg);
+  z-index: 10;
+}
+.sticker-clip1 {
+  position: absolute;
+  top: 100px;
+  left: -40px;
+  width: 80px;
+  transform: rotate(45deg);
+  z-index: 10;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html">Home</a>
+    <a href="agama.html">Agama</a>
+    <a href="bahasaindonesia.html">Bahasa Indonesia</a>
+    <a href="pkn.html">Pkn</a>
+    <a href="ips.html">IPS</a>
+    <a href="english.html">English</a>
+    <a href="mandarin.html">Mandarin</a>
+  </header>
+
+  <div class="section">
+    <div class="story">
+      <p>Berada di Jogja tentunya membutuhkan waktu lebih dari 2-3 hari untuk mengunjungi banyaknya tempat wisata. Agar pengalaman lebih lengkap, menginap selama satu minggu di Jogja sangat disarankan untuk kita meresapi dan beradaptasi dengan budaya di sana. Grand Mercure Yogyakarta, yang berada di Jl. Laksada Adisucipto No. 80, Demangan Baru, Caturtunggal, Sleman, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55281, merupakan hotel yang cocok untuk tempat menginap. Disekitar hotel ini, ada area publik seperti Stasiun Kereta Lempuyungan, Rumah Sakit Siloam Yogyakarta, Lippo Plaza Jogja, dan Saphir Square. Selain itu, Grand Mercure menawarkan berbagai fasilitas seperti kolam renang dalam dan luar ruangan, pusat kebugaran, taman, spa, sauna, serta WiFi gratis di semua kamar. Terlebih dari itu, harga kamar hotel
+        bervariasi. Mulai dari Rp 600.000 per malam untuk tipe standar dengan luas 24 m², hingga Rp2.500.000 per malam untuk tipe suite dengan nuansa mewah dan ukuran kamar 49 m².</p>
+    </div>
+    <div class="postcard">
+      <div class="washi-tape"></div>
+      <img src="1254420_17041017280052285985.webp" alt="Temple View" />
+      <div class="rating">⭐️⭐️⭐️⭐️⭐</div>
+      <div class="note">"Twin Bed Hotel Grand Mercure"</div>
+
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="story">
+      <img src="Paper_clip_PNG19.png" class="sticker-clip">
+      <img src="Paper_clip_PNG19.png" class="sticker-clip1">
+      <p>Dari segi kebersihan dan kenyamanan kamar, hotel ini menjaga standar yang tinggi. Dapat dilihat dari kamar hotel yang disinfeksi harian dan dirapikan kembali setelah digunakan. Tak hanya itu, kebersihan kamar mandi juga menjadi prioritas utama untuk dijaga kebersihannya dan dipastikan bahwa area kamar mandi bebas dari kuman dan nyaman digunakan. Mengenai rasa masakan, makanan-makanan pada saat breakfast sangatlah bervariasi. Dimulai dari pilihan roti yang kemudian dapat dipanggang, kue-kue manis, nasi goreng, hingga pilihan internasional seperti omelette, sosis, dan buah-buahan segar. Semua hidangan yang disajikan menggugah selera makan para pengunjung. Ditambah dengan pelayanan yang ramah dan profesional dari staf hotel membuat hotel ini nyaris sempurna.</p>
+    </div>
+    <div class="postcard">
+      <img src="171572487.jpg" alt="Forest Trail" />
+      <div class="rating">⭐️⭐️⭐️⭐️⭐️</div>
+      <div class="note">"Dining Hotel Grand Mercure"</div>
+
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="story">
+      <p>Pada kesimpulannya, saya sangat merekomendasikan Grand Mercure kepada siapa saja yang mencari tempat menginap strategis yang dekat dengan area publik yang tentunya berguna jika ada hal yang medesak. Karena dengan fasilitas yang lengkap, pelayanan profesional, serta kenyamanan dan keamanan yang luar biasa, hotel ini menjadi sangat cocok untuk perjalanan bisnis maupun liburan. Jadi, jika kamu sedang berlibur ke Jogja, kunjungilah dan buat hotel ini tempat menginapmu!</p>
+    </div>
+    <div class="postcard">
+      <div class="washi-tape1"></div>
+      <img src="9608_ho_00_p_2048x1536.jpg" alt="Sunset View" />
+      <div class="rating">⭐️⭐️⭐️⭐️⭐</div>
+      <div class="note">"Grand Mercure Hotel"</div>
+
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,289 @@
+<body>
+  <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  background-color: #d0cabc;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: #eae9df;
+  padding: 15px 0;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+header a {
+  color: #544e43;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  margin: 0 15px;
+  font-size: 15px;
+  transition: color 0.3s ease;
+  font-weight: 400;
+}
+
+header a:hover {
+  color: hsl(224, 32%, 88%);
+}
+
+h1 {
+  font-family: 'Montserrat', serif;
+  font-size: 1.8rem;
+  margin: 10px 0;
+  font-weight: 700;
+  text-align: center;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.tab-button {
+  background-color: #fdfcfc;
+  padding: 10px 20px;
+  border: 1px solid #e1dede;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.tab-button:hover {
+  background-color: #ddd;
+}
+
+.comparison-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+}
+/* Style for images in the comparison cards */
+.comparison-cards img {
+  max-width: 100%; /* Ensure the image doesn't exceed the container width */
+  height: auto;    /* Maintain the aspect ratio */
+  display: block;  /* Remove any extra space below the image */
+  margin: 0 auto;  /* Center the image */
+}
+
+.card {
+  display: none;
+  text-align: center;
+  margin-bottom: 20px;
+  width: 80%;
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.card.active {
+  display: block;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.vote-btn {
+  background-color: #f0f0f0;
+  padding: 12px 25px;
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.vote-btn:hover {
+  background-color: #ddd;
+}
+
+.vote-result {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  text-align: center;
+  color: #333;
+}
+.continue-btn {
+  background-color: #ebe6e6; /* Pastel Lavender */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.continue-btn:hover {
+  background-color: #ede3db; /* Pastel Peach */
+}
+
+
+.sticker {
+  width: 40px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.sticker:hover {
+  transform: rotate(10deg);
+}
+/* Container for images */
+.image-container {
+    max-width: 80%;    /* Control the container width */
+    margin: 0 auto;    /* Center the container */
+    display: flex;     /* Use flexbox to center the content */
+    justify-content: center; /* Horizontally center the content */
+    align-items: center;     /* Vertically center the content (optional) */
+}
+
+.image-container img {
+    max-width: 100%;    /* Make sure image fits the container */
+    height: auto;       /* Maintain aspect ratio */
+    display: block;     /* Remove extra space below the image */
+}
+header {
+  border-bottom: 3px solid #b8ab9d;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+      <a href="index.html">Home</a>
+      <a href="agama.html">Agama</a>
+      <a href="bahasaindonesia.html">Bahasa Indonesia</a>
+      <a href="pkn.html">Pkn</a>
+      <a href="ips.html">IPS</a>
+      <a href="english.html">English</a>
+      <a href="mandarin.html">Mandarin</a>
+  </header>
+
+  <!-- Toggle buttons -->
+ <!-- Toggle buttons -->
+<div class="tabs">
+<button class="tab-button" id="prambanan-btn">Candi Prambanan</button>
+<button class="tab-button" id="borobudur-btn">Candi Borobudur</button>
+</div>
+
+<!-- Comparison Cards -->
+<div class="image-container">
+<div id="prambanan-content" class="card active">
+    <h2>Candi Prambanan</h2>
+    <img id="prambanan-img" src="R.jpg" alt="prambanan">
+    <!-- Second image (hidden initially) -->
+    <img id="prambanan-img-next" src="prambanan-temple-compund.webp" alt="next-prambanan" style="display: none;">
+    
+    <!-- Button to toggle between images -->
+    <button id="continue-prambanan" class="continue-btn">▶️</button>
+
+    <p style="margin-bottom: 20px; margin-top: 20px;"> 
+        Candi Prambanan adalah sebuah kompleks candi Hindu terbesar di wilayah Indonesia. 
+        Karya monumental ini dibangun pada abad ke-9, tepatnya pada tahun 856 Masehi. 
+        Koleksi utama terdiri dari tiga buah candi utama dengan lima buah candi teras kecil yang dikelilinginya.
+    </p>
+    <p>
+        Candi Prambanan adalah sebuah kompleks candi Hindu terbesar di wilayah Indonesia. 
+        Karya monumental ini dibangun pada abad ke-9, tepatnya pada tahun 856 Masehi. 
+        Koleksi utama terdiri dari tiga buah candi utama dengan lima buah candi teras kecil yang dikelilinginya. 
+        Arsitektur Prambanan dikenal karena begitu istimewa dan unik. Hal ini dikarenakan Prambanan yang berukuran besar, 
+        megah, tinggi dan juga banyaknya relief pada candi-candi yang menceritakan kisah hidup Ramayana. 
+        Tidak hanya sebagai monumen bersejarah, namun Candi ini memiliki fungsi keagamaan yang penting dalam ajaran Hindu.
+    </p>
+</div>
+
+<div id="borobudur-content" class="card">
+    <h2>Candi Borobudur</h2>
+    <img src="sunrise-candi-borobudur.jpg" alt="borobudur">
+
+    <p style="margin-bottom: 20px; margin-top: 20px;">Candi Borobudur merupakan candi Buddha Mahayana yang berlokasi di dekat kota Mutilan di Pulau Jawa, Indonesia. Di Jawa, Candi Borobudur dipakai sebagai tempat ziarah dan ritual-ritual oleh umat BUddha sampai sekitar abad ke-14 dan 15 Masehi.</p>
+    <p>Selain itu, monumen ini terdiri atas enam teras berbentuk bujur sangkar yang di atasnya terdapat tiga pelataran melingkar, pada dindingnya dihiasi dengan 2.672 panel relief dan aslinya terdapat 504 arca Buddha. Borobudur memiliki koleksi relief Buddha terlengkap dan terbanyak di dunia. Stupa utama terbesar teletak di tengah sekaligus memahkotai bangunan ini, dikelilingi oleh tiga barisan melingkar 72 stupa berlubang yang di dalamnya terdapat arca Buddha tengah duduk bersila dalam posisi teratai sempurna dengan mudra (sikap tangan) Dharmachakra mudra (memutar roda dharma).</p>
+</div>
+</div>
+
+<!-- Vote Button Below the Comparison Cards -->
+<div class="vote-result">
+<p>Vote for your favorite destination!</p>
+<button class="vote-btn" id="vote-btn"> I'd go again! 🪷</button>
+</div>
+
+<!-- Divider with Cute Sticker -->
+<div class="divider">
+<img src="cute-sticker.png" alt="Cute Sticker" class="sticker">
+</div>
+
+<script>
+// Initialize vote counters
+let prambananVotes = 0;
+let borobudurVotes = 0;
+
+document.getElementById('prambanan-btn').addEventListener('click', function() {
+  document.getElementById('prambanan-content').classList.add('active');
+  document.getElementById('borobudur-content').classList.remove('active');
+});
+
+document.getElementById('borobudur-btn').addEventListener('click', function() {
+  document.getElementById('borobudur-content').classList.add('active');
+  document.getElementById('prambanan-content').classList.remove('active');
+});
+
+// Voting Functionality
+document.getElementById('vote-btn').addEventListener('click', function() {
+  const isPrambananWinner = Math.random() < 0.5; // Randomly simulate the vote
+
+  if (isPrambananWinner) {
+    prambananVotes++;
+    document.getElementById('vote-btn').innerHTML = `Candi Prambanan Wins! (${prambananVotes} votes)`;
+  } else {
+    borobudurVotes++;
+    document.getElementById('vote-btn').innerHTML = `Candi Borobudur Wins! (${borobudurVotes} votes)`;
+  }
+
+  // Fun Animation: Button Bounce
+  this.style.transform = "scale(1.2)";
+  setTimeout(() => {
+      this.style.transform = "scale(1)";
+  }, 200); // Reset scale after bounce
+
+  // Disable button after vote
+  this.disabled = true;
+});
+
+// Toggle between the images for Prambanan
+document.getElementById('continue-prambanan').addEventListener('click', function() {
+  const currentImage = document.getElementById('prambanan-img');
+  const nextImage = document.getElementById('prambanan-img-next');
+  
+  // Toggle visibility between the two images
+  if (currentImage.style.display === "none") {
+      currentImage.style.display = "block";
+      nextImage.style.display = "none";
+  } else {
+      currentImage.style.display = "none";
+      nextImage.style.display = "block";
+  }
+});
+</script>
+</body>

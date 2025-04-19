@@ -1,0 +1,368 @@
+<body>
+    <style>
+
+        header {
+          background-color: #aea282;
+          padding: 15px 0;
+          text-align: center;
+          box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+          position: sticky;
+          top: 0;
+          z-index: 999;
+        }
+      
+        header a {
+          color: #5e5c4c;
+          text-decoration: none;
+          font-family: 'Poppins', sans-serif;
+          margin: 0 15px;
+          font-size: 15px;
+          transition: color 0.s ease;
+          font-weight: 400;
+        }
+      
+        header a:hover {
+          color: hsl(224, 32%, 88%);
+        }
+      
+        h1 {
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+          text-align: center;
+          margin-top: 30px;
+          font-size: 36px;
+          color: #3e404b;
+          text-decoration: capitalize;
+          transition: 2s linear;
+        }
+    *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+     background-color: #f9f3da;
+  display: flex;
+  flex-direction: column;
+}
+h1 {
+  font-family: 'montserrat', serif;
+  font-size: 1.8rem;
+  margin: 10px 0;
+  font-weight: 700;
+}
+
+h2 {
+  font-family: 'Playfair display', serif;
+  font-size: 1.5rem;
+  margin: 10px 0;
+  color: #5c636f;
+}
+
+img {
+  width: 300;
+  max-height: 450px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  margin-top: 10px;
+}
+.image-collage {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 50px;
+    }
+
+    .image-collage img {
+      width: 300px;
+      height: auto;
+      border-radius: 16px;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+      border: 1.8px dashed #c3b19a;
+      background-color: #fff;
+      padding: 3px;
+      transition: transform 0.3s ease, z-index 0.3 ease;
+      position:relative;
+    }
+    .image-collage img {
+  transition: transform 0.4s ease;
+}
+
+.image-collage img:hover {
+  transform: scale(1.05);
+  z-index: 10;
+}
+
+p {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #555;
+  font-family: 'Playfair Display', serif;
+  padding: 0 15px;
+  text-align: center;
+ }
+ .page-title {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: #5c5c5c; /* soft grayish tone */
+  font-family: 'Quicksand', sans-serif; /* or any cute rounded font */
+  background-color: #d8caab; /* soft background behind title */
+  padding: 10px 20px;
+  display: inline-block;
+  border-radius: 12px;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+  text-shadow: 1px 1px 1px rgba(145, 124, 71, 0.8);
+}
+
+.text-box {
+  background-color: #fffefc;
+  border: 2px dashed #d3c4b1;
+  border-radius: 16px;
+  padding: 20px;
+  margin: 40px auto;
+  width: 80%;
+  max-width: 600px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+  font-family: 'Playfair Display', serif;
+
+}
+.text-box h4 {
+  margin-bottom: 10px;
+  font-family: 'Indie Flower', cursive;
+  font-size: 1.3rem;
+  color: #6c5f58;
+}
+.polaroid {
+  width: 420px; /* slightly bigger and more balanced */
+  background: #fff;
+  padding: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  margin: 30px auto;
+  border-radius: 12px;
+  text-align: center;
+  position: relative;
+}
+
+.polaroid img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.washi-tape {
+  width: 60px;
+  height: 20px;
+  background: repeating-linear-gradient(
+    45deg,
+    #d5cbb9,
+    #a0956a 5px,
+    #acc7c9 5px,
+    #646b77 10px
+  );
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-4deg);
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.corner-sticker {
+  position: fixed;
+  bottom: 10px;
+  z-index: 999;
+  width: 60px;
+  height: 60px;
+}
+
+.corner-sticker.left {
+  left: 10px;
+}
+
+.corner-sticker.right {
+  right: 10px;
+}
+
+.corner-sticker img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+  user-select: none;
+}
+
+@keyframes wiggle {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(4deg);
+  }
+}
+
+@keyframes floaty {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.corner-sticker {
+  position: fixed;
+  bottom: 10px;
+  z-index: 999;
+  width: 60px;
+  height: 60px;
+  animation: wiggle 2.5s infinite ease-in-out;
+}
+
+.corner-sticker.left {
+  left: 10px;
+  animation-delay: 0s;
+}
+
+.corner-sticker.right {
+  right: 10px;
+  animation: floaty 3s infinite ease-in-out;
+  animation-delay: 0.3s;
+}
+
+.corner-sticker img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+  user-select: none;
+}
+.image-preview {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.image-preview img {
+  width: auto;
+  height: auto;
+  max-width: 1100px; /* force it to grow bigger if possible */
+  max-height: 90vh;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+  transform: scale(1.15); /* zoom it in a little */
+}
+.image-preview.show img {
+  animation: zoomIn 0.3s ease;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1.15);
+    opacity: 1;
+  }
+}
+
+
+
+      </style>
+        </head>
+        <body>
+       <header>
+      <a href="index.html">Home</a>
+      <a href="agama.html">Agama</a>
+ <a href="bahasaindonesia.html">Bahasa Indonesia</a>
+ <a href="pkn.html">Pkn</a>
+ <a href="ips.html">IPS</a>
+ <a href="english.html">English</a>
+ <a href="mandarin.html">Mandarin</a>
+</header>
+<div class="image-collage">
+  <img src="WhatsApp Image 2025-04-18 at 23.50.54_418eef6a.jpg" alt="Image 1" class="img1">
+  <img src="WhatsApp Image 2025-04-18 at 23.50.55_16768ac8.jpg" alt="Image 2" class="img2">
+  <img src="WhatsApp Image 2025-04-18 at 23.50.55_e87bc81a.jpg" alt="Image 3" class="img3">
+</div>
+<div class="page-title">
+  <h3>Discovering Malioboro📎: A Lively Street Full of Stories</h3>
+  </div>
+  <div class="text-box">
+    <p>Malioboro is a famous street offering fun and experiences, colorful markets along the street, and lively energy with a calming moment. In Malioboro, I was strolling around with friends, encountering something exciting in every corner. Local handicrafts, traditional transportation, and overall the culture is what makes this street special and worth visiting. Additionally, the cool night breeze gently brushing past makes exploring even more enjoyable.
+    </p>
+  </div>
+
+    <div class="text-box"> 
+      <h4> The Streets 🕯️</h4>
+<p>Strolling around with friends, our
+  laughter and chattering filled the air. Every turn brought something new: colorful shops, unique souvenirs, and interesting displays, you name it all! We stopped by stores, curious to see what they had, even talked to the shopkeeper like we had known each other forever. Other than that, we spotted traditional transportation like horse-drawn carriages, adding to the cultural charm of the place. Walking for hours with the beam of lights along the street. An absolutely memorable experience. ✨
+</p>
+</div>
+
+<div class="polaroid" onclick="openPreview(this)">
+  <div class="washi-tape"></div>
+  <img src="WhatsApp Image 2025-04-19 at 16.38.53_b2e72d2e.jpg" alt="Malioboro Street" />
+</div>
+
+<div class="image-preview" onclick="closePreview()">
+  <img id="preview-img" src="" alt="Preview" />
+</div>
+
+  <div class="text-box">
+    <h4>🛍️ The Shops</h4>
+    <p>There are a lot of colorful markets catching our attention. There is a shop of randomly unique kid toys, full of colors with every different type: toy pistols, princess toys, and other toys that are able to fly. The shopkeeper is nice that we even chat and joke with him, turning a stop into a moment full of joy. Surrounded by all the lively stalls, our main focus is on finding the iconic I Love Jogja shirt. We check every shop full of racks of shirts, as each shopkeeper says they don't have what we are looking for. Eventually, we do find one but the color isn't quite right, so we decide not to get it. We then stop by a simple shop selling brownies, stacked neatly with every different variant. My eyes stop at the chocolate brownies - even from a distance, I could already taste a fudgy dessert bar with its rich chocolate flavor, appealing to the stomach. Then, I decide to buy some. I think it is nice to share a little piece of Malioboro with my family. Lastly, I try the famous Malio Gelato! Entering the place, the warm atmosphere fills the room. There are a lot of flavors: red velvet, cookies and cream, mint chocolate, and many other interesting flavors. I choose 2 flavors which are chocolate and cookies and cream. When I try it, it tastes like genuine chocolate! The flavors melts in my mouth, and it feels like heaven, definitely recommended! And by that, there truly are colorful markets that leave impressions.
+    </p>
+</div>
+
+
+  <div class="text-box">
+    <h4> 🌆 The Ambience</h4>
+    <p>Malioboro is a place with a good mix of lively and calm. Wandering through the street at night
+      felt alive, as I had my friends around me. Their street's soft glow made every step feel even
+      lighter. Excitement controlled our body and our laughter echoed through the street. Adding to
+      the warmth, the cool night breeze brushed through our hair, even nature wanted to be a part of
+      it. In short, it was a rare feeling you don't find anywhere else.
+      </p>
+  </div>
+  <div class="corner-sticker left">
+    <img src="acq6pL4gi.png" alt="Left Sticker">
+  </div>
+  <div class="corner-sticker right">
+    <img src="acq6pL4gi.png" alt="Right Sticker">
+  </div>
+ 
+  <script>
+function openPreview(el) {
+  const imgSrc = el.querySelector('img').src;
+  const preview = document.querySelector('.image-preview');
+  const previewImg = document.getElementById('preview-img');
+
+  previewImg.src = imgSrc;
+  preview.classList.add("show");
+  preview.style.display = 'flex';
+}
+
+function closePreview() {
+  const preview = document.querySelector('.image-preview');
+  preview.style.display = 'none';
+  preview.classList.remove("show");
+}
+
+  </script>
+  
+  
+</body>

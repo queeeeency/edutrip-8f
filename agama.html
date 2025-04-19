@@ -1,0 +1,284 @@
+<body>
+    <style>
+   * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Poppins', sans-serif;
+      background-color: rgb(241, 236, 243);
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background-color: rgba(173, 208, 172, 0.8);
+      padding: 15px 0;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    header a {
+      color: #5c636f;
+      text-decoration: none;
+      font-family: 'Poppins', sans-serif;
+      margin: 0 15px;
+      font-size: 15px;
+      transition: color 0.3s ease;
+      font-weight: 400;
+    }
+
+    header a:hover {
+      color: hsl(224, 32%, 88%);
+    }
+
+    h1 {
+      font-family: 'Montserrat', sans-serif;
+      text-align: center;
+      margin-top: 30px;
+      font-size: 36px;
+      color: #3e404b;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      margin: 10px 0;
+      color: #5c636f;
+    }
+
+    img {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      margin-top: 10px;
+    }
+
+    p {
+      margin-top: 10px;
+      font-size: 1rem;
+      color: #555;
+      font-family: 'Playfair Display', serif;
+      padding: 0 15px;
+      text-align: center;
+    }
+
+    .subject-container {
+      background-color: white;
+      margin: 30px auto;
+      padding: 20px;
+      border-radius: 30px;
+      width: 70%;
+      max-width: 850px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .experience-section {
+  display: flex;
+  flex-wrap: nowrap; /* Keep text beside the image */
+  align-items: flex-start;
+  justify-content: center;
+  margin: 40px auto;
+  width: 90%;
+  gap: 40px;
+}
+
+.polaroid {
+  background: white;
+  padding: 10px 10px 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  width: 300px;
+  text-align: center;
+}
+
+.polaroid img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.polaroid-caption {
+  font-size: 0.9rem;
+  color: #555;
+  font-family: 'Poppins', sans-serif;
+}
+
+.experience-text {
+  width: 50%;
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  color: #333;
+  text-align: left;
+}
+
+.sticky-notes {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 40px auto;
+}
+
+.note {
+  background-color: #fff6b0;
+  width: 220px;
+  height: 220px;
+  padding: 20px;
+  border-radius: 25px;
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.15);
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  transform: rotate(-2deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.note:nth-child(2) {
+  background-color: #ffe0f0;
+  transform: rotate(2deg);
+}
+.flip-card-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 40px auto;
+  flex-wrap: wrap;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 180px;
+  height: 180px;
+  perspective: 1000px;
+}
+
+.flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-front, .flip-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  padding: 15px;
+  font-size: 0.95rem;
+  box-shadow: 2px 4px 10px rgba(0,0,0,0.15);
+}
+
+.flip-front {
+  background-color: #e0f7fa;
+  color: #444;
+}
+
+.flip-back {
+  background-color: #e0fff2;
+  transform: rotateY(180deg);
+  color: #333;
+}
+
+.floating-icon {
+  position: absolute;
+  font-size: 50px;
+  animation: float 6s infinite ease-in-out;
+  z-index: 10;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html">Home</a>
+    <a href="agama.html">Agama</a>
+    <a href="bahasaindonesia.html">Bahasa Indonesia</a>
+    <a href="pkn.html">Pkn</a>
+    <a href="ips.html">IPS</a>
+    <a href="english.html">English</a>
+    <a href="mandarin.html">Mandarin</a>
+  </header>
+
+  <div class="experience-section">
+    <div class="polaroid">
+      <img src="suasana-Desa-Wisata-Pentingsari.jpg" alt="Live-In Experience Photo">
+      <div class="polaroid-caption">Suasana di Desa Wisata Pentingsari</div>
+    </div>
+    <div class="experience-text">
+      <p>Pada saat di live in, kami belajar tentang budaya yang ada di sana. Selain itu, kami juga melakukan UMKM, seperti UMKM jamur crispy, tempe, dan juga kopi. Selama kegiatan, kami menginap di rumah warga, dan itu adalah kegiatan yang membuat saya cemas dan bersemangat di waktu bersamaan.</p>
+      <p>Tujuan dari kegiatan ini adalah untuk melatih kemandirian, belajar hidup di pedesaan, dan beradaptasi dengan lingkungan sekitar. Saya berusaha aktif dalam semua kegiatan, berpartisipasi, dan bersikap terbuka agar bisa mencapai tujuan tersebut.</p>
+      <p>Saat mengikuti live-in, saya belajar menyangkal diri dan bersabar, meski merasa tidak nyaman bermain lumpur atau dijahili teman. Tinggal jauh dari rumah membuat saya harus beradaptasi dengan gaya hidup warga, termasuk bangun pagi dan membantu pekerjaan rumah. Meski jadwal edutrip sangat padat dan melelahkan, saya tetap berusaha melayani dengan kasih. Bahkan saat ingin langsung tidur karena kelelahan, saya teringat untuk tetap berdoa.</p>
+    </div>
+  </div>
+  
+  <div class="floating-icon" style="top: 100px; left: 50px;">🌾</div>
+  <div class="floating-icon" style="bottom: 100px; right: 60px;">☕</div>
+  
+  <div class="sticky-notes">
+    <div class="note">
+      <strong>Gereja Sumur Kitiran</strong><br>
+      - Misa hening & tradisional<br>
+      - Memiliki sumur Kitiran<br>
+      - Gaya bangunan tua<br>
+      - Umat lebih sedikit
+    </div>
+    <div class="note">
+      <strong>Gereja Santo Laurensius</strong><br>
+      - Misa modern & energik<br>
+      - Kapel Adorasi & ruang komunitas<br>
+      - Gaya bangunan modern<br>
+      - Banyak umat & aktif
+    </div>
+    <div class="flip-card-container">
+      <div class="flip-card">
+        <div class="flip-inner">
+          <div class="flip-front">🌱 Pelajaran Hidup</div>
+          <div class="flip-back">Belajar bangun pagi dan ikut pekerjaan rumah</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-inner">
+          <div class="flip-front">💬 Momen Berkesan</div>
+          <div class="flip-back">Bermain bersama anak dari orang tua asuh</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-inner">
+          <div class="flip-front">💛 Tindakan Kecil</div>
+          <div class="flip-back">Ikut membantu menjaga warung</div>
+        </div>
+      </div>
+    </div>
+    
+    
+  </div>
+</body>
